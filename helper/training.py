@@ -1,22 +1,22 @@
 from torch import nn
 
-from .interfaces.post_epoch_proc import default_post_epoch_process_without_teacher
-from .interfaces.post_forward_proc import default_post_forward_process
-from .interfaces.pre_epoch_proc import default_pre_epoch_process_without_teacher
-from .interfaces.pre_forward_proc import default_pre_forward_process
-from .interfaces.registry import get_pre_epoch_proc_func, get_pre_forward_proc_func, get_forward_proc_func, \
+from .post_epoch_proc import default_post_epoch_process_without_teacher
+from .post_forward_proc import default_post_forward_process
+from .pre_epoch_proc import default_pre_epoch_process_without_teacher
+from .pre_forward_proc import default_pre_forward_process
+from .registry import get_pre_epoch_proc_func, get_pre_forward_proc_func, get_forward_proc_func, \
     get_post_forward_proc_func, get_post_epoch_proc_func
 from .util import set_hooks, wrap_model, extract_io_dict, update_io_dict
-from constant import SELF_MODULE_PATH, def_logger
-from file_util import make_parent_dirs
-from main_util import load_ckpt, save_on_master
-from module_util import check_if_wrapped, freeze_module_params, get_module, \
+from .constant import SELF_MODULE_PATH, def_logger
+from .file_util import make_parent_dirs
+from .main_util import load_ckpt, save_on_master
+from .module_util import check_if_wrapped, freeze_module_params, get_module, \
     unfreeze_module_params, get_updatable_param_names
-from dataset_util import build_data_loaders
-from ..losses.registry import get_high_level_loss, get_func2extract_model_output
-from ..models.util import redesign_model
-from ..models.wrapper import AuxiliaryModelWrapper, build_auxiliary_model_wrapper
-from ..optim.registry import get_optimizer, get_scheduler
+from .util import build_data_loaders
+from .registry import get_high_level_loss, get_func2extract_model_output
+from .util import redesign_model
+from .wrapper import AuxiliaryModelWrapper, build_auxiliary_model_wrapper
+from .registry import get_optimizer, get_scheduler
 
 logger = def_logger.getChild(__name__)
 

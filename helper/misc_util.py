@@ -1,6 +1,12 @@
 import inspect
 import os
 import sys
+import torch.nn
+import torchvision.datasets
+import torch.utils.data.sampler
+import torch.optim
+import torch.optim.lr_scheduler
+import torch.nn.modules.loss
 
 
 def check_if_plottable():
@@ -59,6 +65,7 @@ def get_functions(package_name, require_names=False):
     :return: collection of functions defined in the given package.
     :rtype: list[(str, typing.Callable)] or list[typing.Callable]
     """
+    print('Revanth', package_name)
     members = inspect.getmembers(sys.modules[package_name], inspect.isfunction)
     if require_names:
         return members

@@ -2,8 +2,8 @@ import os
 
 import yaml
 
-from constant import def_logger
-from main_util import import_get, import_call, import_call_method
+from .constant import def_logger
+from .main_util import import_get, import_call, import_call_method
 
 logger = def_logger.getChild(__name__)
 

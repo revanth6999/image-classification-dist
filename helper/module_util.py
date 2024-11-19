@@ -3,7 +3,7 @@ from collections import OrderedDict
 from torch.nn import DataParallel, Sequential, ModuleList, Module, Parameter
 from torch.nn.parallel import DistributedDataParallel
 
-from constant import def_logger
+from .constant import def_logger
 
 logger = def_logger.getChild(__name__)
 

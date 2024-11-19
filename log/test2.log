@@ -1,44 +1,122 @@
-2024-11-19 13:01:14,372	INFO	torchdistill.common.main_util	Not using distributed mode
-2024-11-19 13:01:14,372	INFO	__main__	Namespace(config='configs/densenet_from_wide_resnet.yaml', device='mps', run_log='log/test2.log', start_epoch=0, seed=None, disable_cudnn_benchmark=False, test_only=False, student_only=False, log_config=False, world_size=1, dist_url='env://', adjust_lr=False)
-2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Getting `RandomCrop` from `torchvision.transforms`
-2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Calling `RandomCrop` from `torchvision.transforms` with {'kwargs': {'size': 32, 'padding': 4}}
-2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Getting `RandomHorizontalFlip` from `torchvision.transforms`
-2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Calling `RandomHorizontalFlip` from `torchvision.transforms` with {'kwargs': {'p': 0.5}}
-2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Getting `ToTensor` from `torchvision.transforms`
-2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Calling `ToTensor` from `torchvision.transforms` with {}
-2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Getting `Normalize` from `torchvision.transforms`
-2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Calling `Normalize` from `torchvision.transforms` with {'kwargs': {'mean': [0.5070754, 0.48655024, 0.44091907], 'std': [0.26733398, 0.25643876, 0.2761503]}}
-2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Getting `Compose` from `torchvision.transforms`
-2024-11-19 13:01:14,378	INFO	torchdistill.common.main_util	Calling `Compose` from `torchvision.transforms` with {'kwargs': {'transforms': [RandomCrop(size=(32, 32), padding=4), RandomHorizontalFlip(p=0.5), ToTensor(), Normalize(mean=[0.5070754, 0.48655024, 0.44091907], std=[0.26733398, 0.25643876, 0.2761503])]}}
-2024-11-19 13:01:14,378	INFO	torchdistill.common.main_util	Getting `CIFAR100` from `torchvision.datasets`
-2024-11-19 13:01:14,378	INFO	torchdistill.common.main_util	Calling `CIFAR100` from `torchvision.datasets` with {'kwargs': {'root': '~/datasets/cifar100', 'train': True, 'download': True, 'transform': Compose(
+2024-11-19 15:17:56,705	INFO	helper.main_util	Not using distributed mode
+2024-11-19 15:17:56,705	INFO	__main__	Namespace(config='configs/densenet_from_wide_resnet.yaml', device='mps', run_log='log/test2.log', start_epoch=0, seed=None, disable_cudnn_benchmark=False, test_only=False, student_only=False, log_config=False, world_size=1, dist_url='env://', adjust_lr=False)
+2024-11-19 15:17:56,710	INFO	helper.main_util	Getting `RandomCrop` from `torchvision.transforms`
+2024-11-19 15:17:56,710	INFO	helper.main_util	Calling `RandomCrop` from `torchvision.transforms` with {'kwargs': {'size': 32, 'padding': 4}}
+2024-11-19 15:17:56,710	INFO	helper.main_util	Getting `RandomHorizontalFlip` from `torchvision.transforms`
+2024-11-19 15:17:56,710	INFO	helper.main_util	Calling `RandomHorizontalFlip` from `torchvision.transforms` with {'kwargs': {'p': 0.5}}
+2024-11-19 15:17:56,710	INFO	helper.main_util	Getting `ToTensor` from `torchvision.transforms`
+2024-11-19 15:17:56,710	INFO	helper.main_util	Calling `ToTensor` from `torchvision.transforms` with {}
+2024-11-19 15:17:56,710	INFO	helper.main_util	Getting `Normalize` from `torchvision.transforms`
+2024-11-19 15:17:56,710	INFO	helper.main_util	Calling `Normalize` from `torchvision.transforms` with {'kwargs': {'mean': [0.5070754, 0.48655024, 0.44091907], 'std': [0.26733398, 0.25643876, 0.2761503]}}
+2024-11-19 15:17:56,710	INFO	helper.main_util	Getting `Compose` from `torchvision.transforms`
+2024-11-19 15:17:56,710	INFO	helper.main_util	Calling `Compose` from `torchvision.transforms` with {'kwargs': {'transforms': [RandomCrop(size=(32, 32), padding=4), RandomHorizontalFlip(p=0.5), ToTensor(), Normalize(mean=[0.5070754, 0.48655024, 0.44091907], std=[0.26733398, 0.25643876, 0.2761503])]}}
+2024-11-19 15:17:56,710	INFO	helper.main_util	Getting `CIFAR100` from `torchvision.datasets`
+2024-11-19 15:17:56,710	INFO	helper.main_util	Calling `CIFAR100` from `torchvision.datasets` with {'kwargs': {'root': '~/datasets/cifar100', 'train': True, 'download': True, 'transform': Compose(
     RandomCrop(size=(32, 32), padding=4)
     RandomHorizontalFlip(p=0.5)
     ToTensor()
     Normalize(mean=[0.5070754, 0.48655024, 0.44091907], std=[0.26733398, 0.25643876, 0.2761503])
 )}}
-2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Getting `ToTensor` from `torchvision.transforms`
-2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Calling `ToTensor` from `torchvision.transforms` with {}
-2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Getting `Normalize` from `torchvision.transforms`
-2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Calling `Normalize` from `torchvision.transforms` with {'kwargs': {'mean': [0.5070754, 0.48655024, 0.44091907], 'std': [0.26733398, 0.25643876, 0.2761503]}}
-2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Getting `Compose` from `torchvision.transforms`
-2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Calling `Compose` from `torchvision.transforms` with {'kwargs': {'transforms': [ToTensor(), Normalize(mean=[0.5070754, 0.48655024, 0.44091907], std=[0.26733398, 0.25643876, 0.2761503])]}}
-2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Getting `CIFAR100` from `torchvision.datasets`
-2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Calling `CIFAR100` from `torchvision.datasets` with {'kwargs': {'root': '~/datasets/cifar100', 'train': False, 'download': True, 'transform': Compose(
+2024-11-19 15:17:57,520	INFO	helper.main_util	Getting `ToTensor` from `torchvision.transforms`
+2024-11-19 15:17:57,520	INFO	helper.main_util	Calling `ToTensor` from `torchvision.transforms` with {}
+2024-11-19 15:17:57,520	INFO	helper.main_util	Getting `Normalize` from `torchvision.transforms`
+2024-11-19 15:17:57,520	INFO	helper.main_util	Calling `Normalize` from `torchvision.transforms` with {'kwargs': {'mean': [0.5070754, 0.48655024, 0.44091907], 'std': [0.26733398, 0.25643876, 0.2761503]}}
+2024-11-19 15:17:57,520	INFO	helper.main_util	Getting `Compose` from `torchvision.transforms`
+2024-11-19 15:17:57,520	INFO	helper.main_util	Calling `Compose` from `torchvision.transforms` with {'kwargs': {'transforms': [ToTensor(), Normalize(mean=[0.5070754, 0.48655024, 0.44091907], std=[0.26733398, 0.25643876, 0.2761503])]}}
+2024-11-19 15:17:57,520	INFO	helper.main_util	Getting `CIFAR100` from `torchvision.datasets`
+2024-11-19 15:17:57,520	INFO	helper.main_util	Calling `CIFAR100` from `torchvision.datasets` with {'kwargs': {'root': '~/datasets/cifar100', 'train': False, 'download': True, 'transform': Compose(
     ToTensor()
     Normalize(mean=[0.5070754, 0.48655024, 0.44091907], std=[0.26733398, 0.25643876, 0.2761503])
 )}}
-2024-11-19 13:01:15,895	INFO	torchdistill.common.main_util	Getting `RandomSampler` from `torch.utils.data`
-2024-11-19 13:01:15,895	INFO	torchdistill.common.main_util	Getting `SequentialSampler` from `torch.utils.data`
-2024-11-19 13:01:16,412	INFO	torchdistill.common.main_util	ckpt file path is None
-2024-11-19 13:01:16,530	INFO	torchdistill.common.main_util	ckpt file path is None
-2024-11-19 13:01:16,650	INFO	__main__	Start training
-2024-11-19 13:01:16,654	INFO	torchdistill.core.distillation	[teacher model]
-2024-11-19 13:01:16,654	INFO	torchdistill.models.util	Using the original model
-2024-11-19 13:01:16,654	INFO	torchdistill.core.distillation	[student model]
-2024-11-19 13:01:16,654	INFO	torchdistill.models.util	Using the original model
-2024-11-19 13:01:16,654	INFO	torchdistill.core.distillation	Loss = 1.0 * KDLoss(
+2024-11-19 15:17:58,243	INFO	helper.main_util	Getting `RandomSampler` from `torch.utils.data`
+2024-11-19 15:17:58,243	INFO	helper.main_util	Getting `SequentialSampler` from `torch.utils.data`
+2024-11-19 15:17:58,760	INFO	helper.main_util	ckpt file path is None
+2024-11-19 15:17:58,892	INFO	helper.main_util	ckpt file path is None
+2024-11-19 15:17:59,003	INFO	__main__	Start training
+2024-11-19 15:17:59,004	INFO	helper.distillation	[teacher model]
+2024-11-19 15:17:59,004	INFO	helper.util	Using the original model
+2024-11-19 15:17:59,004	INFO	helper.distillation	[student model]
+2024-11-19 15:17:59,004	INFO	helper.util	Using the original model
+2024-11-19 15:17:59,004	INFO	helper.distillation	Loss = 1.0 * KDLoss(
   (cross_entropy_loss): CrossEntropyLoss()
 )
-2024-11-19 13:01:16,654	INFO	torchdistill.core.distillation	Freezing the whole teacher model
-2024-11-19 13:01:43,867	INFO	torchdistill.misc.log	Epoch: [0]  [  0/782]  eta: 5:54:37  lr: 0.1  img/s: 25.12702786897031  loss: 4.6580 (4.6580)  time: 27.2086  data: 24.6424
+2024-11-19 15:17:59,004	INFO	helper.distillation	Freezing the whole teacher model
+2024-11-19 15:18:27,091	INFO	helper.log	Epoch: [0]  [  0/782]  eta: 6:05:59  lr: 0.1  img/s: 24.702259847804854  loss: 4.6843 (4.6843)  time: 28.0806  data: 25.4732
+2024-11-19 15:19:08,631	INFO	helper.log	Epoch: [0]  [100/782]  eta: 0:07:50  lr: 0.1  img/s: 156.7263786917645  loss: 4.1986 (4.4010)  time: 0.4106  data: 0.0005
+2024-11-19 15:19:49,606	INFO	helper.log	Epoch: [0]  [200/782]  eta: 0:05:20  lr: 0.1  img/s: 155.22529907571032  loss: 3.9778 (4.2371)  time: 0.4089  data: 0.0004
+2024-11-19 15:20:31,794	INFO	helper.log	Epoch: [0]  [300/782]  eta: 0:04:04  lr: 0.1  img/s: 152.47163175353296  loss: 3.8862 (4.1378)  time: 0.4223  data: 0.0004
+2024-11-19 15:21:13,896	INFO	helper.log	Epoch: [0]  [400/782]  eta: 0:03:05  lr: 0.1  img/s: 152.6634409115829  loss: 3.8584 (4.0651)  time: 0.4209  data: 0.0004
+2024-11-19 15:21:55,965	INFO	helper.log	Epoch: [0]  [500/782]  eta: 0:02:13  lr: 0.1  img/s: 152.86791997248287  loss: 3.7440 (4.0021)  time: 0.4199  data: 0.0004
+2024-11-19 15:22:37,015	INFO	helper.log	Epoch: [0]  [600/782]  eta: 0:01:24  lr: 0.1  img/s: 156.9774120393491  loss: 3.6311 (3.9452)  time: 0.4086  data: 0.0004
+2024-11-19 15:23:17,884	INFO	helper.log	Epoch: [0]  [700/782]  eta: 0:00:37  lr: 0.1  img/s: 156.99595747866448  loss: 3.5205 (3.8845)  time: 0.4092  data: 0.0003
+2024-11-19 15:25:12,988	INFO	helper.log	Epoch: [0] Total time: 0:07:13
+2024-11-19 15:25:32,240	INFO	helper.log	Validation:  [ 0/79]  eta: 0:25:19  acc1: 19.5312 (19.5312)  acc5: 46.8750 (46.8750)  time: 19.2360  data: 17.7558
+2024-11-19 15:27:01,643	INFO	helper.log	Validation: Total time: 0:01:48
+2024-11-19 15:27:01,646	INFO	__main__	 * Acc@1 17.9200	Acc@5 46.0400
+
+2024-11-19 15:27:01,646	INFO	__main__	Best top-1 accuracy: 0.0000 -> 17.9200
+2024-11-19 15:27:01,647	INFO	__main__	Updating ckpt at ./resource/run1.pt
+2024-11-19 15:27:28,529	INFO	helper.log	Epoch: [1]  [  0/782]  eta: 5:47:26  lr: 0.1  img/s: 47.00291067877491  loss: 3.1177 (3.1177)  time: 26.6582  data: 25.2953
+2024-11-19 15:28:09,498	INFO	helper.log	Epoch: [1]  [100/782]  eta: 0:07:36  lr: 0.1  img/s: 157.26978223590046  loss: 3.2515 (3.2894)  time: 0.4080  data: 0.0004
+2024-11-19 15:28:50,347	INFO	helper.log	Epoch: [1]  [200/782]  eta: 0:05:14  lr: 0.1  img/s: 157.38467320317002  loss: 3.1562 (3.2576)  time: 0.4086  data: 0.0004
+2024-11-19 15:29:31,224	INFO	helper.log	Epoch: [1]  [300/782]  eta: 0:03:59  lr: 0.1  img/s: 157.24592146006165  loss: 3.0816 (3.2130)  time: 0.4085  data: 0.0004
+2024-11-19 15:30:12,230	INFO	helper.log	Epoch: [1]  [400/782]  eta: 0:03:01  lr: 0.1  img/s: 157.28489473440587  loss: 2.9490 (3.1691)  time: 0.4085  data: 0.0004
+2024-11-19 15:30:53,082	INFO	helper.log	Epoch: [1]  [500/782]  eta: 0:02:10  lr: 0.1  img/s: 156.85816495512836  loss: 2.9205 (3.1251)  time: 0.4087  data: 0.0004
+2024-11-19 15:31:33,932	INFO	helper.log	Epoch: [1]  [600/782]  eta: 0:01:22  lr: 0.1  img/s: 157.31420651501878  loss: 2.8414 (3.0818)  time: 0.4084  data: 0.0004
+2024-11-19 15:32:15,045	INFO	helper.log	Epoch: [1]  [700/782]  eta: 0:00:36  lr: 0.1  img/s: 155.81636993489548  loss: 2.8111 (3.0433)  time: 0.4135  data: 0.0005
+2024-11-19 15:34:08,387	INFO	helper.log	Epoch: [1] Total time: 0:07:06
+2024-11-19 15:34:26,413	INFO	helper.log	Validation:  [ 0/79]  eta: 0:23:43  acc1: 39.0625 (39.0625)  acc5: 67.1875 (67.1875)  time: 18.0142  data: 17.3371
+2024-11-19 15:35:55,745	INFO	helper.log	Validation: Total time: 0:01:47
+2024-11-19 15:35:55,747	INFO	__main__	 * Acc@1 31.4800	Acc@5 64.4300
+
+2024-11-19 15:35:55,747	INFO	__main__	Best top-1 accuracy: 17.9200 -> 31.4800
+2024-11-19 15:35:55,747	INFO	__main__	Updating ckpt at ./resource/run1.pt
+2024-11-19 15:36:22,450	INFO	helper.log	Epoch: [2]  [  0/782]  eta: 5:45:05  lr: 0.1  img/s: 51.48418585561015  loss: 2.5304 (2.5304)  time: 26.4777  data: 25.2336
+2024-11-19 15:37:03,310	INFO	helper.log	Epoch: [2]  [100/782]  eta: 0:07:34  lr: 0.1  img/s: 157.2508956962061  loss: 2.5263 (2.6398)  time: 0.4083  data: 0.0004
+2024-11-19 15:37:44,142	INFO	helper.log	Epoch: [2]  [200/782]  eta: 0:05:13  lr: 0.1  img/s: 157.35837916484454  loss: 2.6719 (2.6107)  time: 0.4081  data: 0.0004
+2024-11-19 15:38:24,977	INFO	helper.log	Epoch: [2]  [300/782]  eta: 0:03:58  lr: 0.1  img/s: 156.09743752565905  loss: 2.6501 (2.6026)  time: 0.4090  data: 0.0004
+2024-11-19 15:39:05,809	INFO	helper.log	Epoch: [2]  [400/782]  eta: 0:03:00  lr: 0.1  img/s: 157.41559146784138  loss: 2.5365 (2.5761)  time: 0.4084  data: 0.0004
+2024-11-19 15:39:46,755	INFO	helper.log	Epoch: [2]  [500/782]  eta: 0:02:09  lr: 0.1  img/s: 157.408668412945  loss: 2.5213 (2.5517)  time: 0.4086  data: 0.0004
+2024-11-19 15:40:27,601	INFO	helper.log	Epoch: [2]  [600/782]  eta: 0:01:22  lr: 0.1  img/s: 157.0836945371471  loss: 2.2987 (2.5295)  time: 0.4084  data: 0.0004
+2024-11-19 15:41:08,429	INFO	helper.log	Epoch: [2]  [700/782]  eta: 0:00:36  lr: 0.1  img/s: 157.17291010768201  loss: 2.3731 (2.5074)  time: 0.4081  data: 0.0004
+2024-11-19 15:43:01,374	INFO	helper.log	Epoch: [2] Total time: 0:07:05
+2024-11-19 15:43:18,991	INFO	helper.log	Validation:  [ 0/79]  eta: 0:23:10  acc1: 35.9375 (35.9375)  acc5: 71.8750 (71.8750)  time: 17.6061  data: 17.1655
+2024-11-19 15:44:48,106	INFO	helper.log	Validation: Total time: 0:01:46
+2024-11-19 15:44:48,108	INFO	__main__	 * Acc@1 37.0900	Acc@5 68.9300
+
+2024-11-19 15:44:48,109	INFO	__main__	Best top-1 accuracy: 31.4800 -> 37.0900
+2024-11-19 15:44:48,109	INFO	__main__	Updating ckpt at ./resource/run1.pt
+2024-11-19 15:45:14,608	INFO	helper.log	Epoch: [3]  [  0/782]  eta: 5:42:38  lr: 0.1  img/s: 47.339941238506064  loss: 2.4223 (2.4223)  time: 26.2892  data: 24.9363
+2024-11-19 15:45:55,580	INFO	helper.log	Epoch: [3]  [100/782]  eta: 0:07:34  lr: 0.1  img/s: 156.46118946089803  loss: 2.2309 (2.2699)  time: 0.4091  data: 0.0004
+2024-11-19 15:46:36,393	INFO	helper.log	Epoch: [3]  [200/782]  eta: 0:05:12  lr: 0.1  img/s: 157.10998880358753  loss: 2.1711 (2.2487)  time: 0.4080  data: 0.0004
+2024-11-19 15:47:17,225	INFO	helper.log	Epoch: [3]  [300/782]  eta: 0:03:58  lr: 0.1  img/s: 157.37304738683272  loss: 2.2377 (2.2404)  time: 0.4084  data: 0.0004
+2024-11-19 15:47:58,182	INFO	helper.log	Epoch: [3]  [400/782]  eta: 0:03:00  lr: 0.1  img/s: 156.9138216153559  loss: 2.1543 (2.2270)  time: 0.4091  data: 0.0004
+2024-11-19 15:48:39,128	INFO	helper.log	Epoch: [3]  [500/782]  eta: 0:02:09  lr: 0.1  img/s: 156.85266561722486  loss: 2.1225 (2.2118)  time: 0.4082  data: 0.0004
+2024-11-19 15:49:20,080	INFO	helper.log	Epoch: [3]  [600/782]  eta: 0:01:22  lr: 0.1  img/s: 140.01987143241647  loss: 2.2007 (2.2011)  time: 0.4152  data: 0.0006
+2024-11-19 15:50:00,947	INFO	helper.log	Epoch: [3]  [700/782]  eta: 0:00:36  lr: 0.1  img/s: 157.39823882672883  loss: 2.0933 (2.1865)  time: 0.4090  data: 0.0004
+2024-11-19 15:51:54,081	INFO	helper.log	Epoch: [3] Total time: 0:07:05
+2024-11-19 15:52:11,660	INFO	helper.log	Validation:  [ 0/79]  eta: 0:23:07  acc1: 45.3125 (45.3125)  acc5: 71.8750 (71.8750)  time: 17.5660  data: 17.0821
+2024-11-19 15:53:40,853	INFO	helper.log	Validation: Total time: 0:01:46
+2024-11-19 15:53:40,856	INFO	__main__	 * Acc@1 40.9900	Acc@5 73.6900
+
+2024-11-19 15:53:40,856	INFO	__main__	Best top-1 accuracy: 37.0900 -> 40.9900
+2024-11-19 15:53:40,856	INFO	__main__	Updating ckpt at ./resource/run1.pt
+2024-11-19 15:54:08,356	INFO	helper.log	Epoch: [4]  [  0/782]  eta: 5:55:43  lr: 0.1  img/s: 51.44197808523906  loss: 1.8857 (1.8857)  time: 27.2940  data: 26.0487
+2024-11-19 15:54:49,190	INFO	helper.log	Epoch: [4]  [100/782]  eta: 0:07:40  lr: 0.1  img/s: 157.28415747197354  loss: 1.9892 (2.0324)  time: 0.4080  data: 0.0004
+2024-11-19 15:55:30,012	INFO	helper.log	Epoch: [4]  [200/782]  eta: 0:05:15  lr: 0.1  img/s: 157.09150834745643  loss: 1.9901 (2.0242)  time: 0.4086  data: 0.0004
+2024-11-19 15:56:10,844	INFO	helper.log	Epoch: [4]  [300/782]  eta: 0:03:59  lr: 0.1  img/s: 157.4876273551088  loss: 2.0150 (2.0173)  time: 0.4081  data: 0.0004
+2024-11-19 15:56:51,650	INFO	helper.log	Epoch: [4]  [400/782]  eta: 0:03:01  lr: 0.1  img/s: 157.1620516657621  loss: 1.8933 (1.9981)  time: 0.4082  data: 0.0004
+2024-11-19 15:57:32,614	INFO	helper.log	Epoch: [4]  [500/782]  eta: 0:02:10  lr: 0.1  img/s: 157.74342460166818  loss: 1.8876 (1.9920)  time: 0.4159  data: 0.0004
+2024-11-19 15:58:13,460	INFO	helper.log	Epoch: [4]  [600/782]  eta: 0:01:22  lr: 0.1  img/s: 157.32582363900954  loss: 1.9148 (1.9873)  time: 0.4083  data: 0.0004
+2024-11-19 15:58:54,294	INFO	helper.log	Epoch: [4]  [700/782]  eta: 0:00:36  lr: 0.1  img/s: 157.44153526277358  loss: 1.8764 (1.9799)  time: 0.4082  data: 0.0004
+2024-11-19 16:00:47,240	INFO	helper.log	Epoch: [4] Total time: 0:07:06
+2024-11-19 16:01:04,865	INFO	helper.log	Validation:  [ 0/79]  eta: 0:23:11  acc1: 53.1250 (53.1250)  acc5: 82.8125 (82.8125)  time: 17.6126  data: 17.1274
+2024-11-19 16:02:33,979	INFO	helper.log	Validation: Total time: 0:01:46
+2024-11-19 16:02:33,981	INFO	__main__	 * Acc@1 47.3700	Acc@5 79.2500
+
+2024-11-19 16:02:33,981	INFO	__main__	Best top-1 accuracy: 40.9900 -> 47.3700
+2024-11-19 16:02:33,981	INFO	__main__	Updating ckpt at ./resource/run1.pt
+2024-11-19 16:03:00,788	INFO	helper.log	Epoch: [5]  [  0/782]  eta: 5:46:23  lr: 0.1  img/s: 50.74165963799738  loss: 2.0721 (2.0721)  time: 26.5771  data: 25.3146
+2024-11-19 16:03:41,601	INFO	helper.log	Epoch: [5]  [100/782]  eta: 0:07:35  lr: 0.1  img/s: 157.4346099257504  loss: 1.7830 (1.8192)  time: 0.4081  data: 0.0004
+2024-11-19 16:04:22,598	INFO	helper.log	Epoch: [5]  [200/782]  eta: 0:05:13  lr: 0.1  img/s: 157.1249786352302  loss: 1.9140 (1.8254)  time: 0.4085  data: 0.0004
+2024-11-19 16:17:05,509	INFO	helper.log	Epoch: [5]  [300/782]  eta: 0:23:15  lr: 0.1  img/s: 156.08654565161015  loss: 1.7683 (1.8241)  time: 35.5956  data: 0.0006

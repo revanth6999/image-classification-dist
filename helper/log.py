@@ -7,9 +7,9 @@ from logging import FileHandler, Formatter
 import torch
 import torch.distributed as dist
 
-from constant import def_logger, LOGGING_FORMAT
-from file_util import make_parent_dirs
-from main_util import is_dist_avail_and_initialized
+from .constant import def_logger, LOGGING_FORMAT
+from .file_util import make_parent_dirs
+from .main_util import is_dist_avail_and_initialized
 
 logger = def_logger.getChild(__name__)
 
