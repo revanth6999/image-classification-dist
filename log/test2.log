@@ -1,0 +1,44 @@
+2024-11-19 13:01:14,372	INFO	torchdistill.common.main_util	Not using distributed mode
+2024-11-19 13:01:14,372	INFO	__main__	Namespace(config='configs/densenet_from_wide_resnet.yaml', device='mps', run_log='log/test2.log', start_epoch=0, seed=None, disable_cudnn_benchmark=False, test_only=False, student_only=False, log_config=False, world_size=1, dist_url='env://', adjust_lr=False)
+2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Getting `RandomCrop` from `torchvision.transforms`
+2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Calling `RandomCrop` from `torchvision.transforms` with {'kwargs': {'size': 32, 'padding': 4}}
+2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Getting `RandomHorizontalFlip` from `torchvision.transforms`
+2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Calling `RandomHorizontalFlip` from `torchvision.transforms` with {'kwargs': {'p': 0.5}}
+2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Getting `ToTensor` from `torchvision.transforms`
+2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Calling `ToTensor` from `torchvision.transforms` with {}
+2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Getting `Normalize` from `torchvision.transforms`
+2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Calling `Normalize` from `torchvision.transforms` with {'kwargs': {'mean': [0.5070754, 0.48655024, 0.44091907], 'std': [0.26733398, 0.25643876, 0.2761503]}}
+2024-11-19 13:01:14,377	INFO	torchdistill.common.main_util	Getting `Compose` from `torchvision.transforms`
+2024-11-19 13:01:14,378	INFO	torchdistill.common.main_util	Calling `Compose` from `torchvision.transforms` with {'kwargs': {'transforms': [RandomCrop(size=(32, 32), padding=4), RandomHorizontalFlip(p=0.5), ToTensor(), Normalize(mean=[0.5070754, 0.48655024, 0.44091907], std=[0.26733398, 0.25643876, 0.2761503])]}}
+2024-11-19 13:01:14,378	INFO	torchdistill.common.main_util	Getting `CIFAR100` from `torchvision.datasets`
+2024-11-19 13:01:14,378	INFO	torchdistill.common.main_util	Calling `CIFAR100` from `torchvision.datasets` with {'kwargs': {'root': '~/datasets/cifar100', 'train': True, 'download': True, 'transform': Compose(
+    RandomCrop(size=(32, 32), padding=4)
+    RandomHorizontalFlip(p=0.5)
+    ToTensor()
+    Normalize(mean=[0.5070754, 0.48655024, 0.44091907], std=[0.26733398, 0.25643876, 0.2761503])
+)}}
+2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Getting `ToTensor` from `torchvision.transforms`
+2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Calling `ToTensor` from `torchvision.transforms` with {}
+2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Getting `Normalize` from `torchvision.transforms`
+2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Calling `Normalize` from `torchvision.transforms` with {'kwargs': {'mean': [0.5070754, 0.48655024, 0.44091907], 'std': [0.26733398, 0.25643876, 0.2761503]}}
+2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Getting `Compose` from `torchvision.transforms`
+2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Calling `Compose` from `torchvision.transforms` with {'kwargs': {'transforms': [ToTensor(), Normalize(mean=[0.5070754, 0.48655024, 0.44091907], std=[0.26733398, 0.25643876, 0.2761503])]}}
+2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Getting `CIFAR100` from `torchvision.datasets`
+2024-11-19 13:01:15,168	INFO	torchdistill.common.main_util	Calling `CIFAR100` from `torchvision.datasets` with {'kwargs': {'root': '~/datasets/cifar100', 'train': False, 'download': True, 'transform': Compose(
+    ToTensor()
+    Normalize(mean=[0.5070754, 0.48655024, 0.44091907], std=[0.26733398, 0.25643876, 0.2761503])
+)}}
+2024-11-19 13:01:15,895	INFO	torchdistill.common.main_util	Getting `RandomSampler` from `torch.utils.data`
+2024-11-19 13:01:15,895	INFO	torchdistill.common.main_util	Getting `SequentialSampler` from `torch.utils.data`
+2024-11-19 13:01:16,412	INFO	torchdistill.common.main_util	ckpt file path is None
+2024-11-19 13:01:16,530	INFO	torchdistill.common.main_util	ckpt file path is None
+2024-11-19 13:01:16,650	INFO	__main__	Start training
+2024-11-19 13:01:16,654	INFO	torchdistill.core.distillation	[teacher model]
+2024-11-19 13:01:16,654	INFO	torchdistill.models.util	Using the original model
+2024-11-19 13:01:16,654	INFO	torchdistill.core.distillation	[student model]
+2024-11-19 13:01:16,654	INFO	torchdistill.models.util	Using the original model
+2024-11-19 13:01:16,654	INFO	torchdistill.core.distillation	Loss = 1.0 * KDLoss(
+  (cross_entropy_loss): CrossEntropyLoss()
+)
+2024-11-19 13:01:16,654	INFO	torchdistill.core.distillation	Freezing the whole teacher model
+2024-11-19 13:01:43,867	INFO	torchdistill.misc.log	Epoch: [0]  [  0/782]  eta: 5:54:37  lr: 0.1  img/s: 25.12702786897031  loss: 4.6580 (4.6580)  time: 27.2086  data: 24.6424
